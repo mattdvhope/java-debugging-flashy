@@ -62,7 +62,7 @@ public class FlashCardServiceImpl implements FlashCardService {
         continue;
       }
       Long lowestScore = idToViewCounts.get(leastViewedId);
-      if (entry.getValue() >= lowestScore) {
+      if (entry.getValue() < lowestScore) {
         break;
       }
       leastViewedId = entry.getKey();
